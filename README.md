@@ -19,7 +19,7 @@ to install the requirements:
 pip install -r requirements.txt
 ```
 
-Note that installation of [`glasspy`](https://github.com/drcassar/glasspy) requires `pytorch` (for `pytorch`
+Note that installation of [`glasspy`](https://github.com/drcassar/glasspy) requires [`pytorch`](https://pytorch.org/) (for [`pytorch`](https://pytorch.org/)
 installation, see [here](https://pytorch.org/get-started/locally/).
 
 Also, different notebooks require different [`glasspy`](https://github.com/drcassar/glasspy) versions in order to
