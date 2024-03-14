@@ -6,7 +6,8 @@ and glass forming ability", Allec et al. A preprint of the
 manuscript is available on arXiv.
 
 iPython notebooks for reproducing the figures of the paper are in
-the [`notebooks`](notebooks) folder. Supporting datasets are in the [`data`](data) folder.
+the [`notebooks`](notebooks) folder. Supporting datasets are in the
+[`data`](data) folder.
 
 ## Python environment set-up
 
@@ -16,4 +17,7 @@ to install the requirements:
 
 ```
 pip install -r requirements.txt
-``` 
+```
+
+Note that installation of `glasspy` requires `pytorch` (for `pytorch`
+installation, see [here](https://pytorch.org/get-started/locally/). 
