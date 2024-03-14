@@ -19,10 +19,10 @@ to install the requirements:
 pip install -r requirements.txt
 ```
 
-Note that installation of `glasspy` requires `pytorch` (for `pytorch`
+Note that installation of [`glasspy`](https://github.com/drcassar/glasspy) requires `pytorch` (for `pytorch`
 installation, see [here](https://pytorch.org/get-started/locally/).
 
-Also, different notebooks require different `glasspy` versions in order to
+Also, different notebooks require different [`glasspy`](https://github.com/drcassar/glasspy) versions in order to
 reproduce the results in the paper exactly. Please see the top cell of each
 notebook to see if a specific version is recommended.
 
@@ -34,7 +34,7 @@ and test datasets and ii) the regression of the MYEGA equation for these
 datasets.
 
 ### 1. Loading GlassNet data
-Currently, in each notebook, we use `glasspy` to load the GlassNet data
+Currently, in each notebook, we use [`glasspy`](https://github.com/drcassar/glasspy) to load the GlassNet data
 like this:
 
 ```
