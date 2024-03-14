@@ -4,4 +4,6 @@ seaborn
 pandas
 numpy
 sklearn
+pymatgen
+mpltern
 glasspy
