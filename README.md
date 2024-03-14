@@ -22,6 +22,10 @@ pip install -r requirements.txt
 Note that installation of `glasspy` requires `pytorch` (for `pytorch`
 installation, see [here](https://pytorch.org/get-started/locally/).
 
+Also, different notebooks require different `glasspy` versions in order to
+reproduce the results in the paper exactly. Please see the top cell of each
+notebook to see if a specific version is recommended.
+
 ## Running the notebooks
 All of the notebooks can be ran independently of each other; however,
 certain lines are time consuming and can be reduced by saving data 
