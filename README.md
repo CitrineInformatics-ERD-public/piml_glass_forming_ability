@@ -87,3 +87,10 @@ visc_at_Tl.to_csv('viscosity_glassnet_train.csv')
 # Load series from csv file
 visc_at_Tl = pd.read_csv('viscosity_glassnet_train.csv', index_col=0)
 ```
+
+## Other notes
+- For the ternary plots, the only systems for which the true glass forming region 
+can be plotted are Na2O-Fe2O3-P2O5 and Na2O-B2O3-SiO2. This is hard-coded. If you'd
+like to add your own system, you will have to edit `plot_ternary` of `notebooks/utils.py`. 
+
+
