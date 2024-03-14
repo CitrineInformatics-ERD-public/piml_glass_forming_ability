@@ -6,7 +6,7 @@ and glass forming ability", Allec et al. A preprint of the
 manuscript is available on arXiv.
 
 Jupyter notebooks for reproducing the figures of the paper are in
-the [`notebooks`](notebooks) folder. Supporting datasets are in the
+the [`notebooks`](notebooks){:target="_blank"} folder. Supporting datasets are in the
 [`data`](data) folder.
 
 ## Python environment setup
