@@ -34,8 +34,11 @@ Currently, in each notebook, we use `glasspy` to load the GlassNet data
 like this:
 
 ```
-# First, load GlassNet
-GlassNet()
+# Import GlassNet
+from glasspy.predict.models import GlassNet
+
+# Load the model
+glassnet = GlassNet()
 
 # Then load data
 glassnet_test_df = glassnet.get_test_dataset()
@@ -60,6 +63,15 @@ Currently, in any notebook that requires $\eta(T_l)$, we use GlassNet to regress
 the MYEGA equation:
 
 ```
+# Import GlassNet
+from glasspy.predict.models import GlassNet
+
+# Load the model
+glassnet = GlassNet()
+
+# Read training data from csv file (this can only be done after completing 1. above)
+glassnet_train_df = pd.read_csv('glassnet_train_df.csv', index_col=0, header=[0, 1])
+
 X = glassnet_train_df.elements
 Tl = glassnet_train_df.property.Tl
 visc_at_Tl = glassnet.predict_log10_viscosity( T = Tl, composition = X )
