@@ -9,7 +9,7 @@ iPython notebooks for reproducing the figures of the paper are in
 the [`notebooks`](notebooks) folder. Supporting datasets are in the
 [`data`](data) folder.
 
-## Python environment set-up
+## Python environment setup
 
 After activating your python environment that you will be using
 to run these notebooks (e.g., `conda activate piml_gfa`), use pip
@@ -20,4 +20,58 @@ pip install -r requirements.txt
 ```
 
 Note that installation of `glasspy` requires `pytorch` (for `pytorch`
-installation, see [here](https://pytorch.org/get-started/locally/). 
+installation, see [here](https://pytorch.org/get-started/locally/).
+
+## Running the notebooks
+All of the notebooks can be ran independently of each other; however,
+certain lines are time consuming and can be reduced by saving data 
+locally. Two examples of this are i) the loading of the GlassNet training
+and test datasets and ii) the regression of the MYEGA equation for these 
+datasets.
+
+### 1. Loading GlassNet data
+Currently, in each notebook, we use `glasspy` to load the GlassNet data
+like this:
+
+```
+# First, load GlassNet
+GlassNet()
+
+# Then load data
+glassnet_test_df = glassnet.get_test_dataset()
+glassnet_train_df = glassnet.get_training_dataset()
+```
+
+Instead, you can do this once on your machine, and then save these dataframes
+as csv files and read them in later:
+
+```
+# Save dataframes to csv files
+glassnet_test_df.to_csv('glassnet_test_df.csv')
+glassnet_train_df.to_csv('glassnet_train_df.csv')
+
+# Load dataframes from csv files
+glassnet_test_df = pd.read_csv('glassnet_test_df.csv', index_col=0, header=[0, 1])
+glassnet_train_df = pd.read_csv('glassnet_train_df.csv', index_col=0, header=[0, 1])
+```
+
+### 2. MYEGA regression
+Currently, in any notebook that requires $\eta(T_l)$, we use GlassNet to regress
+the MYEGA equation:
+
+```
+X = glassnet_train_df.elements
+Tl = glassnet_train_df.property.Tl
+visc_at_Tl = glassnet.predict_log10_viscosity( T = Tl, composition = X )
+```
+
+Similar to the example above, you can do this once and then save the viscosity in a
+csv file to load later:
+
+```
+# Save series to csv file
+visc_at_Tl.to_csv('viscosity_glassnet_train.csv')
+
+# Load series from csv file
+visc_at_Tl = pd.read_csv('viscosity_glassnet_train.csv', index_col=0)
+```
