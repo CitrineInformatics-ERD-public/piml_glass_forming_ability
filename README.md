@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ```
 
 Note that installation of [`glasspy`](https://github.com/drcassar/glasspy) requires [`pytorch`](https://pytorch.org/) (for [`pytorch`](https://pytorch.org/)
-installation, see [here](https://pytorch.org/get-started/locally/).
+installation, see [here](https://pytorch.org/get-started/locally/)).
 
 Also, different notebooks require different [`glasspy`](https://github.com/drcassar/glasspy) versions in order to
 reproduce the results in the paper exactly. Please see the top cell of each
@@ -95,6 +95,6 @@ visc_at_Tl = pd.read_csv('viscosity_glassnet_train.csv', index_col=0)
 ## Other notes
 - For the ternary plots, the only systems for which the true glass forming region 
 can be plotted are Na2O-Fe2O3-P2O5 and Na2O-B2O3-SiO2. This is hard-coded. If you'd
-like to add your own system, you will have to edit `plot_ternary` of `notebooks/utils.py`. 
+like to add your own system, you will have to edit `plot_ternary` of [`notebooks/utils.py`](notebooks/utils.py). 
 
 
