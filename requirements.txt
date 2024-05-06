@@ -3,7 +3,7 @@ scipy
 seaborn
 pandas
 numpy
-sklearn
+scikit-learn
 pymatgen
 mpltern
 glasspy
